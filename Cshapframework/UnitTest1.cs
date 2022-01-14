@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Cshapframework
+namespace Csharpframework
 {
     public class Tests
     {

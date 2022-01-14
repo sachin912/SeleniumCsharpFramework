@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumFrameworkincsharp", "..\SeleniumFrameworkincsharp\SeleniumFrameworkincsharp.csproj", "{B70F534F-D408-4D66-B183-98B7123674B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cshapframework", "Cshapframework\Cshapframework.csproj", "{26962A55-7352-4EAC-BBD9-F9EDF713543C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharpframework", "Cshapframework\Csharpframework.csproj", "{26962A55-7352-4EAC-BBD9-F9EDF713543C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
