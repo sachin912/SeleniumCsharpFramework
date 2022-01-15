@@ -48,6 +48,10 @@ namespace Csharpframework.ReQUtilities
                     break;
             }
         }
+        public static jsonReader getParser()
+        {
+            return new jsonReader();
+        }
 
         [TearDown]
         public void QuitWindow()
