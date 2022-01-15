@@ -26,7 +26,10 @@ namespace Csharpframework.ReQUtilities
             browserInit(browserName);
             driver.Url = "https://rahulshettyacademy.com/loginpagePractise";
         }
-
+        public IWebDriver getdriver()
+        {
+            return driver;
+        }
         public void browserInit(string browserName)
         {
             switch (browserName)
