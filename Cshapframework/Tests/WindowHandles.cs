@@ -13,19 +13,19 @@ namespace SeleniumFrameworkincsharp.Basics
    public class WindowHandles : @base
     {
       
-        [Test]
+        [Test, Category("Smoke")]
         public void WindowHandleTest()
         {
             string nameEmail = "mentor@rahulshettyacademy.com";
-            string parentWindow = driver.CurrentWindowHandle;
-            driver.FindElement(By.ClassName("blinkingText")).Click();
-            Assert.AreEqual(2, driver.WindowHandles.Count);
-            driver.SwitchTo().Window(driver.WindowHandles[1]);
-            string mailText = driver.FindElement(By.CssSelector(".red")).Text;
+            string parentWindow = driver.Value.CurrentWindowHandle;
+            driver.Value.FindElement(By.ClassName("blinkingText")).Click();
+            Assert.AreEqual(2, driver.Value.WindowHandles.Count);
+            driver.Value.SwitchTo().Window(driver.Value.WindowHandles[1]);
+            string mailText = driver.Value.FindElement(By.CssSelector(".red")).Text;
             string[] splittedText = mailText.Split("at");
             string[] trimmedString = splittedText[1].Trim().Split(" ");
             Assert.AreEqual(nameEmail, trimmedString[0]);
-            driver.SwitchTo().Window(parentWindow);
+            driver.Value.SwitchTo().Window(parentWindow);
         }
 
     }

@@ -10,12 +10,17 @@ using System.Linq;
 
 namespace Csharpframework.Tests
 {
+    // [Parallelizable(ParallelScope.Children)] All class testmethods run parallely
+    //[Parallelizable(ParallelScope.Self)] All classes and there testmethods run parallely
     public class E2ETest : @base
     {
 
-        [Test, TestCaseSource("AddTestData")]
+        [Test, TestCaseSource("AddTestData"),Category("regression")]
+        //dotnet test Csharpframework.csproj --filter TestCategory=regression
+        //dotnet test Csharpframework.csproj --filter TestCategory=regression -- TestRunParameters.Parameter(name=\"browserName\",value=\"Chrome\")
         //[TestCase("rahulshettyacademy", "learning", "iphone X", "Blackberry","ind", "India")]
         //[TestCase("rahulshettyacademy", "learning", "iphone X", "Blackberry","ind", "India")]
+        //[Parallelizable(ParallelScope.All)] All test datas of testmethods run parallely
         public void Test(string userName, string passWord,string[] expectedProducts, string country, string countryfullName)
         {
             //string[] expectedProducts = {Product1, Product2 };
@@ -78,7 +83,6 @@ namespace Csharpframework.Tests
                                           getParser().extractdataAsListofString("products"),
                                           getParser().extractdataAsString("country"),
                                           getParser().extractdataAsString("countryFullName"));
-                                          
         }
     }
 }
